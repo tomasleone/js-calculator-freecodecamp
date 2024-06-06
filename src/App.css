@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  background-color: #333;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+  background-color: #222;
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+  text-align: right;
+  min-height: 50px;
 }
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  background-color: #444;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.1s;
+  user-select: none;
+  color: #fff;
+}
+
+.button:active {
+  background-color: #555;
+  transform: scale(0.95);
+}
+
+.button:hover {
+  background-color: #666;
+}
+
+.button.equals {
+  grid-column: span 2;
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.button.equals:hover {
+  background-color: #c9302c;
+}
+
+.button.equals:active {
+  background-color: #ac2925;
+}
+
+.button.action {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.button.action:hover {
+  background-color: #31b0d5;
+}
+
+.button.action:active {
+  background-color: #269abc;
+}
+
+.button.operator {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.button.operator:hover {
+  background-color: #ec971f;
+}
+
+.button.operator:active {
+  background-color: #d58512;
+}
+
